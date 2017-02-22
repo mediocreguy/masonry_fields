@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Provides a field formatter for displaying multi-value fields in a Masonry
+ * layout.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function masonry_fields_help($route_name, RouteMatchInterface $route_match) {
+
+  switch ($route_name) {
+    // Main module help for the masonry_fields module.
+    case 'help.page.masonry_fields':
+      $output = '';
+      $output .= '<h3>' . t('Masonry Fields') . '</h3>';
+      $output .= '<p>' . t('Masonry Fields will provide a formatter for displaying multi-value fields in a Masonry layout.') . '</p>';
+      return $output;
+  }
+}
